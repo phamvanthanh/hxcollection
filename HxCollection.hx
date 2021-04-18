@@ -1,4 +1,4 @@
-package hxcollection;
+package ;
 #if java 
 import java.NativeArray;
 #elseif cpp
@@ -14,13 +14,11 @@ class HxCollection {
         trace("Hello hxcollection");
     }
 
-    #if java || cpp
-
-
+    #if java
     @:generic
     public static function toNativeArray<T>(arr: Array<T>):NativeArray<T> {
-        var narr  = new NativeArray();
-        for (i in arr.length) {
+        var narr  = new NativeArray(arr.length);
+        for (i in 0...arr.length) {
             narr[i] = arr[i];
         }    
 
@@ -30,7 +28,7 @@ class HxCollection {
     @:generic
     public static function toHaxeArray<T>(narr:NativeArray<T>):Array<T> {
         var arr = [];
-        for(i in narr.length){
+        for(i in 0...narr.length){
             arr[i] = narr[i];
         }
 
