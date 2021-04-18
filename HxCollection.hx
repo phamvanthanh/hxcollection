@@ -1,4 +1,4 @@
-
+package hxcollection;
 #if java 
 import java.NativeArray;
 #elseif cpp
