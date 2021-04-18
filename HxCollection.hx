@@ -7,6 +7,10 @@ import cpp.NativeArray;
 #end
 
 
+@:native
+@:nativeGen
+@:nativeChildren
+@:nativeProperty
 class HxCollection {
 
 
