@@ -34,8 +34,7 @@ class HxCollection {
         var arr:Array<T> = [];
         
         for(i in 0...narr.length){
-            trace(narr[i]);
-            arr.push(narr[i]);
+            arr[i] = narr[i];
         }
 
         return arr;
