@@ -33,7 +33,7 @@ class HxCollection {
     public static function toHaxeArray<T>(narr:NativeArray<T>):Array<T> {
         var arr = [];
         for(i in 0...narr.length){
-            arr[i] = narr[i];
+            arr.push(narr[i]);
         }
 
         return arr;
