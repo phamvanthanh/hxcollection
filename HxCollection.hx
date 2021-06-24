@@ -31,8 +31,10 @@ class HxCollection {
 
     @:generic
     public static function toHaxeArray<T>(narr:NativeArray<T>):Array<T> {
-        var arr = [];
+        var arr:Array<T> = [];
+        
         for(i in 0...narr.length){
+            trace(narr[i]);
             arr.push(narr[i]);
         }
 
