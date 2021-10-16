@@ -20,7 +20,7 @@ class HxCollection {
     }
 
     #if java
-    @:generic
+
     public static function toNativeArray<T>(arr: Array<T>):NativeArray<T> {
         var narr  = new NativeArray(arr.length);
         for (i in 0...arr.length) {
@@ -32,6 +32,14 @@ class HxCollection {
     #end
   
 
+    public static function toVector<T>(arr: Array<T>):Vector<T> {
+        var narr  = new Vector(arr.length);
+        for (i in 0...arr.length) {
+            narr[i] = arr[i];
+        }    
+
+        return narr;
+    }
   
 
     public static function toHaxeArray<T>(narr:Vector<T>):Array<T> {
