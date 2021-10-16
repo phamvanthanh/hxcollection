@@ -6,6 +6,7 @@ import cpp.NativeArray;
 
 #end
 
+import haxe.ds.Vector;
 
 @:native
 @:nativeGen
@@ -28,9 +29,12 @@ class HxCollection {
 
         return narr;
     }
+    #end
+  
 
-    @:generic
-    public static function toHaxeArray<T>(narr:NativeArray<T>):Array<T> {
+  
+
+    public static function toHaxeArray<T>(narr:Vector<T>):Array<T> {
         var arr:Array<T> = [];
         
         for(i in 0...narr.length){
@@ -39,6 +43,4 @@ class HxCollection {
 
         return arr;
     }
-
-    #end
 }
